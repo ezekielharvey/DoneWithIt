@@ -19,10 +19,13 @@ import Screen from './app/components/Screen';
 import Icon from './app/components/Icon';
 import ListItem from './app/components/ListItem';
 import AccountScreen from './screens/AccountScreen';
+import ListingsScreen from './screens/ListingsScreen';
+import AppTextInput from './app/components/AppTextInput';
 
 export default function App() {
   return (
-    <WelcomeScreen />
+    <Screen>
+      <AppTextInput placeholder='Username' icon='email'/>
+    </Screen>
   );
 }
-

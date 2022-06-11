@@ -1,5 +1,6 @@
 import React from 'react';
 import { StyleSheet, View, FlatList } from 'react-native'
+import { SimpleLineIcons } from '@expo/vector-icons';
 import Icon from '../app/components/Icon';
 import ListItem from '../app/components/ListItem';
 import ListItemSeparatorComponent from '../app/components/ListItemSeparator';
@@ -42,7 +43,7 @@ function AccountScreen(props) {
           renderItem={({item}) => 
             <ListItem 
               title={item.title}
-              ImageComponent={
+              IconComponent={
                 <Icon 
                   name={item.icon.name}
                   backgroundColor={item.icon.backgroundColor}
@@ -51,6 +52,12 @@ function AccountScreen(props) {
             />
             }/>    
       </View>
+      <ListItem 
+        title='Logout'
+        IconComponent={
+          <Icon name='logout' backgroundColor={colors.black}/>
+        }
+      />
     </Screen>
   );
 }
