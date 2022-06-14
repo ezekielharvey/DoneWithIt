@@ -2,8 +2,8 @@ import React from 'react';
 import { StyleSheet, View, FlatList } from 'react-native'
 import { SimpleLineIcons } from '@expo/vector-icons';
 import Icon from '../app/components/Icon';
-import ListItem from '../app/components/ListItem';
-import ListItemSeparatorComponent from '../app/components/ListItemSeparator';
+import ListItem from '../app/components/lists/ListItem';
+import ListItemSeparatorComponent from '../app/components/lists/ListItemSeparator';
 import Screen from '../app/components/Screen';
 import colors from '../app/config/colors';
 
