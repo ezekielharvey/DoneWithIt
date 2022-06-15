@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { Image, StyleSheet, TouchableOpacity, View, Alert } from 'react-native';
 import colors from '../config/colors';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import * as ImagePicker from 'expo-image-picker';
 
-function ImageInput({ imageUri, onChangeImage }) {
-   useEffect(() => {
+function ImageInput({imageUri, onChangeImage}) {
+  useEffect(() => {
     requestPermission();
   }, []);
 

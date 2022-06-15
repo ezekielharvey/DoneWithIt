@@ -34,16 +34,10 @@ import * as Location from 'expo-location';
 import ImageInput from './app/components/ImageInput';
 import ImageInputList from './app/components/ImageInputList';
 
-
 export default function App() {
-  const [imageUris, setImageUris] = useState([]);
-
   return (
     <Screen>
-      <ImageInputList
-        imageUri={imageUris}
-        onChangeImage={uri => setImageUris(uri)}
-      />
+      <ImageInput />
     </Screen>
   );
 }
