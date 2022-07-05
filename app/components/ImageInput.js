@@ -4,7 +4,7 @@ import colors from '../config/colors';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import * as ImagePicker from 'expo-image-picker';
 
-function ImageInput({imageUri, onChangeImage}) {
+function ImageInput({ imageUri, onChangeImage }) {
   useEffect(() => {
     requestPermission();
   }, []);
@@ -48,7 +48,7 @@ function ImageInput({imageUri, onChangeImage}) {
 const styles = StyleSheet.create({
   container: {
     alignItems: 'center',
-    backgroundColor: colors.light,
+    backgroundColor: colors.testlight,
     borderRadius: 15,
     height: 100,
     width: 100,

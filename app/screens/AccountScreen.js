@@ -1,11 +1,11 @@
 import React from 'react';
 import { StyleSheet, View, FlatList } from 'react-native'
 import { SimpleLineIcons } from '@expo/vector-icons';
-import Icon from '../app/components/Icon';
-import ListItem from '../app/components/lists/ListItem';
-import ListItemSeparatorComponent from '../app/components/lists/ListItemSeparator';
-import Screen from '../app/components/Screen';
-import colors from '../app/config/colors';
+import Icon from '../components/Icon';
+import ListItem from '../components/lists/ListItem';
+import ListItemSeparatorComponent from '../components/lists/ListItemSeparator';
+import Screen from '../components/Screen';
+import colors from '../config/colors';
 
 const menuItems = [
   { 
@@ -32,7 +32,7 @@ function AccountScreen(props) {
       <ListItem
         title="Ezekiel Harvey"
         subTitle="zekeharvey@outlook.com"
-        image={require('../app/assets/profile.jpeg')}
+        image={require('../assets/profile.jpeg')}
       />
       </View>
       <View style={styles.container}>

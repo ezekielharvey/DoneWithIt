@@ -1,6 +1,6 @@
 import React from 'react';
 import { Image, StyleSheet, View } from 'react-native';
-import colors from '../app/config/colors';
+import colors from '../config/colors';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 function ViewImageScreen(props) {
@@ -20,7 +20,7 @@ function ViewImageScreen(props) {
       </View>
       <Image
         style={styles.image}
-        source={require('../app/assets/chair.jpg')}
+        source={require('../assets/chair.jpg')}
         resizeMode="contain"
       />
     </View>

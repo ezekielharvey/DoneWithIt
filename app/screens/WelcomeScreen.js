@@ -1,27 +1,26 @@
 import React from 'react';
 
 import { Image, ImageBackground, StyleSheet, Text, View } from 'react-native';
-import { Colors } from 'react-native/Libraries/NewAppScreen';
-import AppButton from '../app/components/Button';
-import colors from '../app/config/colors';
+import AppButton from '../components/Button';
+import colors from '../config/colors';
 
-const WelcomeScreen = () => {
+const WelcomeScreen = ({ navigation }) => {
   return (
     <ImageBackground
       style={styles.background}
-      source={require('../app/assets/background.jpg')}
+      source={require('../assets/background.jpg')}
       blurRadius={8}
     >
       <View style={styles.logoContainer}>
         <Image
           style={styles.logo}
-          source={require('../app/assets/logo-red.png')}
+          source={require('../assets/logo-red.png')}
         />
         <Text style={styles.tagline}>Sell What You Don't Need!</Text>
       </View>
       <View style={styles.buttonsContainer}>
-        <AppButton title="Login" color='white' />
-        <AppButton title="Register" color="black" textColor='white' />
+        <AppButton title="Login" color='white' onPress={() => navigation.navigate('Login')}/>
+        <AppButton title="Register" color="black" textColor='white' onPress={() => navigation.navigate('Register')}/>
       </View>
     </ImageBackground>
   );

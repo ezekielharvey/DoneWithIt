@@ -9,9 +9,9 @@ import {
   AppFormPicker as Picker,
   SubmitButton,
   FormImagePicker,
-} from '../app/components/forms';
-import Screen from '../app/components/Screen';
-import CategoryPickerItem from '../app/components/CategoryPickerItem';
+} from '../components/forms';
+import Screen from '../components/Screen';
+import CategoryPickerItem from '../components/CategoryPickerItem';
 
 const validationSchema = Yup.object().shape({
   title: Yup.string().required().min(1).label('Title'),

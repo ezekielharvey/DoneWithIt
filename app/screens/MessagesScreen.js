@@ -1,22 +1,22 @@
 import React, { useState } from 'react';
 import { FlatList, StyleSheet, View } from 'react-native';
-import ListItem from '../app/components/lists/ListItem';
-import ListItemDeleteAction from '../app/components/lists/ListItemDeleteAction';
-import ListItemSeparator from '../app/components/lists/ListItemSeparator';
-import Screen from '../app/components/Screen';
+import ListItem from '../components/lists/ListItem';
+import ListItemDeleteAction from '../components/lists/ListItemDeleteAction';
+import ListItemSeparator from '../components/lists/ListItemSeparator';
+import Screen from '../components/Screen';
 
 const initialMessages = [
   {
     id: 1,
     title: 'T1',
     description: 'D1',
-    image: require('../app/assets/profile.jpeg'),
+    image: require('../assets/profile.jpeg'),
   },
   {
     id: 2,
     title: 'T2',
     description: 'D2',
-    image: require('../app/assets/profile.jpeg'),
+    image: require('../assets/profile.jpeg'),
   },
 ];
 
@@ -52,7 +52,7 @@ function MessagesScreen(props) {
               id: 2,
               title: 'T2',
               description: 'D2',
-              image: require('../app/assets/profile.jpeg'),
+              image: require('../assets/profile.jpeg'),
             }
           ])
         }}
