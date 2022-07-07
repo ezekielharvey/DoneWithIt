@@ -33,7 +33,7 @@ function AccountScreen({ navigation }) {
       <ListItem
         title="Ezekiel Harvey"
         subTitle="zekeharvey@outlook.com"
-        image={require('../assets/profile.jpeg')}
+        image={require('../assets/images/profile.jpeg')}
       />
       </View>
       <View style={styles.container}>
