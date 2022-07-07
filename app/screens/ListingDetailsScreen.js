@@ -1,8 +1,9 @@
 import React from 'react';
-import { Image, View, StyleSheet } from 'react-native';
+import { View, StyleSheet } from 'react-native';
 import AppText from '../components/Text';
 import ListItem from '../components/lists/ListItem';
 import colors from '../config/colors';
+import { Image } from 'react-native-expo-image-cache';
 
 function ListingDetailsScreen({ route }) {
   const listing = route.params;
@@ -10,17 +11,19 @@ function ListingDetailsScreen({ route }) {
     <View>
       <Image
         style={styles.image}
-        source={listing.image}
+        preview={{ uri: listing.images[0].thumbnailUrl }}
+        tint="light"
+        uri={listing.images[0].url}
       />
       <View style={styles.detailsContainer}>
         <AppText style={styles.title}>{listing.title}</AppText>
         <AppText style={styles.price}>${listing.price}</AppText>
         <View style={styles.userContainer}>
-        <ListItem
-          image={require('../assets/images/profile.jpeg')}
-          title="Ezekiel Harvey"
-          subTitle="5 Listings"
-        />
+          <ListItem
+            image={require('../assets/images/profile.jpeg')}
+            title="Ezekiel Harvey"
+            subTitle="5 Listings"
+          />
         </View>
       </View>
     </View>
@@ -47,8 +50,8 @@ const styles = StyleSheet.create({
   },
   userContainer: {
     marginVertical: 20,
-    marginLeft: -30
-  }
+    marginLeft: -30,
+  },
 });
 
 export default ListingDetailsScreen;

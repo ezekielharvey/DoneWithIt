@@ -38,80 +38,89 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer, useNavigation } from '@react-navigation/native';
 import navigationTheme from './app/navigation/navigationTheme';
 import AppNavigator from './app/navigation/AppNavigator';
+import OfflineNotice from './app/components/OfflineNotice';
 
 export default function App() {
   return (
-    <NavigationContainer theme={navigationTheme}>
-      <AppNavigator />
-    </NavigationContainer>
+    <>
+      <OfflineNotice />
+      <NavigationContainer theme={navigationTheme}>
+        <AppNavigator />
+      </NavigationContainer>
+    </>
   );
-  
-// const Stack = createStackNavigator();
 
-// const Link = ({ navigation }) => {
-//   return <Button title="Click" onPress={() => navigation.navigate('Tweets')} />;
-// };
+  // const Stack = createStackNavigator();
 
-// const Tweets = ({ navigation }) => (
-//   <Screen>
-//     <Text>Tweets</Text>
-//     <Button
-//       title="Go to Tweet Details"
-//       onPress={() => navigation.navigate('TweetDetails')}
-//     />
-//   </Screen>
-// );
-// const TweetDetails = ({ navigation }) => (
-//   <Screen>
-//     <Text>Tweet Details</Text>
-//     <Button title="Button" onPress={() => navigation.navigate('Tweets')} />
-//   </Screen>
-// );
+  // const Link = ({ navigation }) => {
+  //   return <Button title="Click" onPress={() => navigation.navigate('Tweets')} />;
+  // };
 
-// const StackNavigator = () => (
-//   <Stack.Navigator screenOptions={{ headerShown: false }}>
-//     <Stack.Screen
-//       name="Tweets"
-//       component={Tweets}
-//       options={{
-//         headerStyle: {
-//           backgroundColor: '#444',
-//           activeTintColor: '#fff',
-//           inactiveTintColor: '#000',
-//           inactiveBackgroundColor: '#fff',
-//         },
-//         headerTintColor: 'white',
-//       }}
-//     />
-//     <Stack.Screen name="TweetDetails" component={TweetDetails} />
-//   </Stack.Navigator>
-// );
+  // const Tweets = ({ navigation }) => (
+  //   <Screen>
+  //     <Text>Tweets</Text>
+  //     <Button
+  //       title="Go to Tweet Details"
+  //       onPress={() => navigation.navigate('TweetDetails')}
+  //     />
+  //   </Screen>
+  // );
+  // const TweetDetails = ({ navigation }) => (
+  //   <Screen>
+  //     <Text>Tweet Details</Text>
+  //     <Button title="Button" onPress={() => navigation.navigate('Tweets')} />
+  //   </Screen>
+  // );
 
-// const Account = () => (
-//   <Screen>
-//     <Text>Account</Text>
-//   </Screen>
-// );
+  // const StackNavigator = () => (
+  //   <Stack.Navigator screenOptions={{ headerShown: false }}>
+  //     <Stack.Screen
+  //       name="Tweets"
+  //       component={Tweets}
+  //       options={{
+  //         headerStyle: {
+  //           backgroundColor: '#444',
+  //           activeTintColor: '#fff',
+  //           inactiveTintColor: '#000',
+  //           inactiveBackgroundColor: '#fff',
+  //         },
+  //         headerTintColor: 'white',
+  //       }}
+  //     />
+  //     <Stack.Screen name="TweetDetails" component={TweetDetails} />
+  //   </Stack.Navigator>
+  // );
 
-// const Tab = createBottomTabNavigator();
-// const TabNavigator = () => (
-//   <Tab.Navigator tabBarOptions={{ activeBackgroundColor: '#e6e6e6' }}>
-//     <Tab.Screen
-//       name="Feed"
-//       component={StackNavigator}
-//       options={{
-//         tabBarIcon: ({size, color}) => <Ionicons name="home" color="#000" size={size}/>,
-//       }}
-//     />
-//     <Tab.Screen
-//       name="Account"
-//       component={Account}
-//       options={{
-//         tabBarIcon: ({size, color}) => <Ionicons name="person" color="#000" size={size} />,
-//       }}
-//     />
-//   </Tab.Navigator>
-// );
+  // const Account = () => (
+  //   <Screen>
+  //     <Text>Account</Text>
+  //   </Screen>
+  // );
 
-
+  // const Tab = createBottomTabNavigator();
+  // const TabNavigator = () => (
+  //   <Tab.Navigator tabBarOptions={{ activeBackgroundColor: '#e6e6e6' }}>
+  //     <Tab.Screen
+  //       name="Feed"
+  //       component={StackNavigator}
+  //       options={{
+  //         tabBarIcon: ({size, color}) => <Ionicons name="home" color="#000" size={size}/>,
+  //       }}
+  //     />
+  //     <Tab.Screen
+  //       name="Account"
+  //       component={Account}
+  //       options={{
+  //         tabBarIcon: ({size, color}) => <Ionicons name="person" color="#000" size={size} />,
+  //       }}
+  //     />
+  //   </Tab.Navigator>
+  // );
 }
+
+// const styles = StyleSheet.create({
+//   container: {
+//     flex: 1,
+//     paddingBottom: 15,
+//   }
+// })
