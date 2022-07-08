@@ -4,6 +4,7 @@ import AppText from '../components/Text';
 import ListItem from '../components/lists/ListItem';
 import colors from '../config/colors';
 import { Image } from 'react-native-expo-image-cache';
+import Constants from 'expo-constants';
 
 function ListingDetailsScreen({ route }) {
   const listing = route.params;
@@ -34,6 +35,7 @@ const styles = StyleSheet.create({
   image: {
     width: '100%',
     height: 300,
+    marginTop: Constants.statusBarHeight,
   },
   detailsContainer: {
     padding: 20,
